@@ -3,3 +3,8 @@ djangorestframework>=3.14
 psycopg2-binary
 python-dotenv
 django-filter
+djangorestframework-simplejwt
+pytest
+pytest-django
+factory-boy
+pytest-cov
