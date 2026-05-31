@@ -70,11 +70,7 @@ WSGI_MODULE = 'config.wsgi'
 
 # Database Configuration (Reading from environment variables)
 DATABASES = {
-    'default': env.db('DATABASE_ENGINE', default='sqlite3:db.sqlite3',
-                       using('default'),
-                       # If using PostgreSQL, these will be read from the environment
-                       # and override the default connection.
-                       default=True)
+    'default': env.db('DATABASE_ENGINE', default='sqlite3:db.sqlite3', using='default', default=True)
 }
 
 # Authentication backend
