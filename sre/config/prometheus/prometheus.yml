@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 15s # Scrape targets every 15 seconds
+
+scrape_configs:
+  # Job for the application service metrics
+  - job_name: 'app'
+    scrape_interval: 15s
+    static-configs:
+      - targets: ['app:8000/metrics'] # 'app' is the service name in docker-compose
