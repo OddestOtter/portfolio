@@ -1,0 +1,9 @@
+# requirements.txt
+duckdb
+pyarrow
+dbt-duckdb
+nhl-api-py
+tenacity
+pytest
+jupysql
+duckdb-engine

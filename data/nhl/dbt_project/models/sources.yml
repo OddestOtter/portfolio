@@ -1,0 +1,19 @@
+version: 2
+sources:
+  - name: landing
+    tables:
+      - name: games
+        meta:
+          external_location: "read_json_auto('/home/jovyan/work/data/landing/games/*/*.json.gz')"version: 2
+sources:
+  - name: landing
+    tables:
+      - name: play_by_play
+        meta:
+          external_location: "read_json_auto('/home/jovyan/work/data/landing/play_by_play/*/*.json.gz')"
+      - name: boxscore
+        meta:
+          external_location: "read_json_auto('/home/jovyan/work/data/landing/boxscore/*/*.json.gz')"
+      - name: shift_chart
+        meta:
+          external_location: "read_json_auto('/home/jovyan/work/data/landing/shift_chart/*/*.json.gz')"

@@ -1,0 +1,18 @@
+services:
+  lab:
+    build: .
+    ports:
+      - "127.0.0.1:8888:8888"     # localhost only
+    volumes:
+      - .:/home/jovyan/work
+    environment:
+      JUPYTER_TOKEN: change-me
+    working_dir: /home/jovyan/work
+
+  pipeline:                        # one-shot job, only runs when asked
+    build: .
+    volumes:
+      - .:/home/jovyan/work
+    working_dir: /home/jovyan/work
+    command: make pipeline
+    profiles: ["job"]

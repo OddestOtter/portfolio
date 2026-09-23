@@ -1,0 +1,7 @@
+nhl:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /home/jovyan/work/data/warehouse/nhl.duckdb
+      threads: 4
