@@ -106,5 +106,6 @@ if __name__ == "__main__":
     ap.add_argument("--refresh-schedule", action="store_true",
                     help="re-fetch schedules (use for the in-progress season)")
     args = ap.parse_args()
+    print(args.seasons, args.limit)
     for s in args.seasons:
         ingest_season(s, args.limit, args.refresh_schedule)
